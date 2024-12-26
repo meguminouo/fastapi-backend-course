@@ -6,7 +6,9 @@ from .routers import router
 app = FastAPI()
 
 # Initialize Database's Table
+
 # Base.metadata.create_all(bind=engine)
+
 
 # Register Router
 app.include_router(router=router, prefix="/api", tags=["todos"])

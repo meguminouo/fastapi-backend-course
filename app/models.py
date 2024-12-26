@@ -11,10 +11,12 @@ class Todo(Base):
     completed = Column(Boolean, default=False)
     due_date = Column(Date, nullable=True)
 
+
 class UserStatus(enum.Enum):
     ACTIVE = "active"
     INACTIVE = "inactive"
     DELETED = "deleted"
+    priority = Column(Integer, default=1)
 
 class User(Base):
     __tablename__ = "users"
